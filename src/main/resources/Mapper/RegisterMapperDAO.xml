@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.StudentScore.Mapper.RegisterMapper">
+    <!--useGeneratedKeys="true" keyProperty="id"代表使用自增，自增的对象是id -->
+    <insert id="registerAccount" parameterType="com.example.demo.dto.Account" useGeneratedKeys="true" keyProperty="id">
+        insert into scorelogin (name,username,password) values (#{account.name},#{account.username},#{account.password})
+    </insert>
+</mapper>
+

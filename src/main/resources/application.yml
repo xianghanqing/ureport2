@@ -1,0 +1,10 @@
+server:
+  port: 8083    # HTTP(Tomcat) Port，端口自定义
+
+spring:
+  datasource:
+  url: jdbc:oracle:thin:@192.168.5.209:6521:orcl
+    username: afadmin
+    password: afadmin
+    #driver-class-name: com.mysql.cj.jdbc.Driver # 加载Driver驱动
+    driver-class-name: oracle.jdbc.OracleDriver
