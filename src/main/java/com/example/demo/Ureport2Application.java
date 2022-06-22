@@ -29,4 +29,5 @@ public class Ureport2Application {
         return new ServletRegistrationBean(new UReportServlet(),"/ureport/*");
     }
 
+
 }
