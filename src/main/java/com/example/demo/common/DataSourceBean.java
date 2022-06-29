@@ -1,5 +1,8 @@
 package com.example.demo.common;
 
+import com.example.demo.Entity.Role;
+import com.example.demo.Service.RoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -17,9 +20,10 @@ public class DataSourceBean {
      * @param parameters
      * @return
      */
+    @Autowired
+    RoleService roleService;
     public List<Map<String, Object>> loadReportData(String dsName, String dataSetName, Map<String, Object> parameters) {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-
         Map<String, Object> m1 = new HashMap<String, Object>();
         m1.put("year", "2000");
         m1.put("month", "1");
@@ -53,4 +57,8 @@ public class DataSourceBean {
         }
         return list;
     }*/
+    public List<Role> loadRoleData(String dsName, String dataSetName, Map<String, Object> parameters) {
+        //List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        return roleService.selectAll();
+    }
 }

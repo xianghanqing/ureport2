@@ -9,10 +9,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Repository;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.example.demo"})
 //定义mapper区
-@MapperScan("com.example.demo.Mapper")
+@MapperScan(basePackages = "com.example.demo.Mapper",annotationClass = Repository.class)
 @ImportResource("classpath:context.xml")
 public class Ureport2Application {
 
