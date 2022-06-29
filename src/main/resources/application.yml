@@ -8,6 +8,9 @@ spring:
     url: jdbc:oracle:thin:@192.168.5.209:6521:orcl
     driver-class-name: oracle.jdbc.OracleDriver
 
+Login:
+  username: admin
+  password: admin
 
   #  username: root
    #   password: 123456
